@@ -1,19 +1,22 @@
-$breakpoints: (
-    'sm': 'screen and (max-width: 576px)',
-    'md': 'screen and (max-width: 768px)',
-    'lg': 'screen and (max-width: 992px)',
-    // 'xl': 'screen and (min-width: 1200px)',
-) !default;
+@charset "UTF-8";
+@use 'mixin';
 
-@mixin media($breakpoint) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
-}
+// $breakpoints: (
+//     'sm': 'screen and (max-width: 576px)',
+//     'md': 'screen and (max-width: 768px)',
+//     'lg': 'screen and (max-width: 992px)',
+//     // 'xl': 'screen and (min-width: 1200px)',
+// ) !default;
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+// @mixin media($breakpoint) {
+//     @media #{map-get($breakpoints, $breakpoint)} {
+//         @content;
+//     }
+// }
+
+// body{
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+// }
 
 
 header{
@@ -38,7 +41,7 @@ h1{
     font-weight: 900 !important;
 .sp{
     display: none;
-    @include media(md){
+    @include mixin.media(md){
         display: block;
     }
 }
