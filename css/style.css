@@ -19,7 +19,7 @@ header h1 {
 header h1 .sp {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   header h1 .sp {
     display: block;
   }
